@@ -1,17 +1,20 @@
-*{
+* {
     box-sizing: border-box;
     font-family: sans-serif;
 
 }
-body{
+
+body {
     margin: 0;
 }
-.header{
+
+.header {
     position: sticky;
     padding: 5px;
     background: linear-gradient(#8a96e7 30%, #854fee 80%);
 }
-.logo{
+
+.logo {
     display: inline-block;
     text-align: center;
     color: #fff;
@@ -27,20 +30,20 @@ body{
     animation-direction: alternate;
 }
 
-.header_links{
+.header_links {
     width: 57vw;
     text-align: right;
     display: inline-block;
 }
 
-.header_links div{
+.header_links div {
     display: inline-block;
     padding: 10px 20px;
     margin: auto 15px;
     color: #fff;
 }
 
-.header_links div:hover{
+.header_links div:hover {
     font-weight: bold;
     color: #854fee;
     background-color: #fff;
@@ -48,7 +51,7 @@ body{
     cursor: pointer;
 }
 
-.leftBar{
+.leftBar {
     float: left;
     height: 100vh;
     min-width: 200px;
@@ -56,77 +59,76 @@ body{
     margin-right: 30px;
     text-align: center;
     padding: 10px 20px;
-    background: linear-gradient( #854fee 30%, #8a96e7 50%, #ffffff 80%);;
+    background: linear-gradient(#854fee 30%, #8a96e7 50%, #ffffff 80%);
+
 }
 
-.rightBar{
+.rightBar {
     float: left;
-    width: 82%;
+    width: 65%;
     padding: 10px 20px;
-    
+    text-align: center;
 }
-.course{
+
+.course {
     border: 1px solid #ccc;
     padding: 10px;
     color: #fff;
 }
 
-.course:hover{
+.course:hover {
     cursor: pointer;
     color: #000;
     background-color: #fff;
 }
 
-#uploadData{
+#uploadDataBtn {
     margin: 30px auto;
     height: 40px;
 }
 
-/* tables section css */
 
-.tableHeading{
-    text-align: center;
-    text-decoration: underline;
-}
+/* upload student details css */
 
-/* DivTable.com */
-.divTable{
-	display: table;
-	width: 100%;
-}
-.tabHead div{
+li {
+    list-style: none;
+    margin: 20px;
+    margin-right: 40px;
+    background: rgb(246, 248, 149);
     padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: #8a96e7;
+    padding-left: 30px;
+    border: 1px solid;
 }
-.divTableRow {
-	display: table-row;
+
+.header {
+    text-align: center;
+
 }
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
+
+.studentDetail {
+    background-color: aliceblue;
+    border: 1px solid saddlebrown;
+    width: 700px;
+    margin: 10px auto;
 }
-.divTableCell, .divTableHead {
-	border: 1px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
+
+.studentDetail div:first-child {
+    display: inline-block;
+    width: 120px;
 }
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-	font-weight: bold;
+
+.studentDetail div:nth-child(2) {
+    display: inline-block;
+    width: 75%;
 }
-.divTableFoot {
-	background-color: #EEE;
-	display: table-footer-group;
-	font-weight: bold;
-}
-.divTableBody {
-	display: table-row-group;
+
+
+
+.submitBtn {
     text-align: center;
 }
 
-
-
-
+input[type="button"] {
+    width: 140px;
+    height: 30px;
+}

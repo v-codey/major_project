@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
     <title>Student Management</title>
 </head>
+
 <body>
     <div class="header">
         <div class="logo">
@@ -29,45 +32,91 @@
                 <div class="course">BCA</div>
             </div>
 
-            <input id="uploadData" type="button" value="Upload Student Data">
+            <input id="uploadDataBtn" type="button" value="Upload Student Data">
         </div>
 
         <div class="rightBar">
-            <div class="tableHeading">
-                <h2 >Student Data</h2>
-                <h3 class="showCourseTable">B.Tech</h3>
-            </div>
-            <div class="divTable" style="width: 100%;">
-                <div class="divTableBody">
-                    <div class="divTableRow tabHead">
-                        <div class="divTableCell">Sl. no.</div>
-                        <div class="divTableCell">Name</div>
-                        <div class="divTableCell">Roll no.</div>
-                        <div class="divTableCell">DOB</div>
+            <div class="tableContainer hide">
+                <div class="tableHeading">
+                    <h2>Student Data</h2>
+                    <h3 class="showCourseTable">B.Tech</h3>
+                </div>
+                <div class="divTable redTable">
+                    <div class="divTableHeading">
+                        <div class="divTableRow">
+                            <div class="divTableHead">Sl. No.</div>
+                            <div class="divTableHead">Name</div>
+                            <div class="divTableHead">Roll No.</div>
+                            <div class="divTableHead">Age</div>
+                        </div>
                     </div>
-                    <div class="divTableRow">
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                    </div>
-                    <div class="divTableRow">
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                    </div>
-                    <div class="divTableRow">
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableBody">
+                        <div class="divTableRow">
+                            <div class="divTableCell">1</div>
+                            <div class="divTableCell"><span id="s_name"></span></div>
+                            <div class="divTableCell"><span id="s_roll"></span></div>
+                            <div class="divTableCell"><span id="s_gender"></span></div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-            <!-- DivTable.com -->
-        </div>
-    </div>
+                <!-- <div class="redTable outerTableFooter">
+                <div class="tableFootStyle">
+                    <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a
+                            href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+                </div>
+            </div> -->
 
+                <!-- DivTable.com -->
+            </div>
+
+
+            <div class="uploadContainer">
+                <h2 class="uploadHeading">Upload Student Details</h2>
+                <div class="studentDetail">
+                    <ul>
+                        <li>
+                            <div> Student Name: </div>
+                            <div><input type="text" id="sName"></div>
+                        </li>
+                        <li>
+                            <div> Roll No: </div>
+                            <div><input type="text" id="sRoll"></div>
+                        </li>
+                        <li>
+                            <div>Age: </div>
+                            <div><input type="text" id="sAge"></div>
+                        </li>
+                        <li>
+                            <div> Gender: </div>
+                            <div>
+                                <input type="radio" name="gender" value="Male" checked> Male
+                                <input type="radio" name="gender" value="Female"> Female
+                            </div>
+                        </li>
+                        <li>
+                            <div>Course: </div>
+                            <div>
+                                <select name="" id="sCourse">
+                                    <option> MTech </option>
+                                    <option> BTech </option>
+                                    <option> MCA </option>
+                                    <option> BCA </option>
+                                </select>
+                            </div>
+                        </li>
+
+
+                        <div class="submitBtn">
+                            <input id="sub_btn" type="button" value="Add Student Details">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>

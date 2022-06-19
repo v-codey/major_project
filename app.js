@@ -1,32 +1,48 @@
 
-var openMenuBar=()=>{
-   document.querySelector(".feat-show").style.display= 'block';
+var allStudentDetails = {
+    mtech: [],
+    btech: [],
+    mca: [],
+    bca: []
 }
 
-document.querySelector(".feat-btn").addEventListener("click",()=>{
-   openMenuBar();
-});
+class StudentData  {
+    readDetails() {
+        this.name = document.querySelector("#sName").value;
+        this.roll = document.querySelector("#sRoll").value;
+        this.age = document.querySelector("#sAge").value;
+        this.gender = document.querySelector("input[name=gender]:checked").value;
+        this.course = document.querySelector("#sCourse").value;
+        this.course = this.course.toLowerCase();
+        
+        this.addStudentDetailInObject(this.course);
+    }
 
-var openUploadSection=()=>{
-   document.querySelector(".uploadSection").style.display = 'none';
-}   
 
-document.querySelector(".uploadDetails").addEventListener("click",()=>{
-   openUploadSection();
-});
+    addStudentDetailInObject(crs) {
+        var newStu = {
+            name : this.name,
+            roll : this.roll,
+            age : this.age,
+            gender : this.gender,
+        }
 
+        switch(crs){
+            case "mtech":
+                allStudentDetails.mtech.push(newStu);
+                break;
+            case "btech":
+                allStudentDetails.btech.push(newStu);
+                break;
+        }        
+        console.log(allStudentDetails);
+    }
 
-var openTableSection=()=>{
-   document.querySelector(".bTechContainer").classList.toggle("displayToggle");
-   document.querySelector(".mTechContainer").classList.toggle("displayToggle");
-   // document.querySelector(".mTechContainer").style.display = 'block';
-}   
+}
 
-document.querySelector("#bTech").addEventListener("click",()=>{
-   openTableSection();
-});
-document.querySelector("#mTech").addEventListener("click",()=>{
-   openTableSection();
+document.querySelector("#sub_btn").addEventListener('click', () => {
+    var newStud1 = new StudentData();
+    newStud1.readDetails();
 });
 
 
