@@ -1,11 +1,13 @@
 *{
     box-sizing: border-box;
     font-family: sans-serif;
+
 }
 body{
     margin: 0;
 }
 .header{
+    position: sticky;
     padding: 5px;
     background: linear-gradient(#8a96e7 30%, #854fee 80%);
 }
@@ -13,7 +15,7 @@ body{
     display: inline-block;
     text-align: center;
     color: #fff;
-    margin-left: 100px;
+    margin-left: 5%;
 }
 
 .logo h1 {
@@ -48,15 +50,20 @@ body{
 
 .leftBar{
     float: left;
-    position: fixed;
     height: 100vh;
-    min-width: 150px;
+    min-width: 200px;
     width: 15%;
-    margin: 20px;
+    margin-right: 30px;
     text-align: center;
-    margin: 0;
     padding: 10px 20px;
-    background: linear-gradient(#8a96e7 30%, #854fee 80%);;
+    background: linear-gradient( #854fee 30%, #8a96e7 50%, #ffffff 80%);;
+}
+
+.rightBar{
+    float: left;
+    width: 82%;
+    padding: 10px 20px;
+    
 }
 .course{
     border: 1px solid #ccc;
@@ -72,6 +79,54 @@ body{
 
 #uploadData{
     margin: 30px auto;
-    /* width: 120px; */
     height: 40px;
 }
+
+/* tables section css */
+
+.tableHeading{
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.tabHead div{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #8a96e7;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+    text-align: center;
+}
+
+
+
+
