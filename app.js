@@ -61,23 +61,36 @@ uploadBtn.addEventListener('click', ()=>{
 
 
 var updateTable = ()=>{
-    var tableBody = document.querySelector('.divTableBody');
-    var tableRow = document.createElement('div');
-    tableRow.setAttribute("class", "divTableRow");
-    tableBody.appendChild(tableRow);
-    var tableCell = document.createElement('div');
-    tableCell.setAttribute("class", "divTableCell");
-    var temp = document.querySelector(".divTableRow")
-    temp.appendChild(tableCell);
-    tableCell.innerText = '1';
+    var num = allStudentDetails.mtech.length;
+    console.log(num);
+    var tableBody = document.querySelector('#tableBody');
+    var createRow = document.createElement('div');
+    createRow.setAttribute("class", "divTableRow");
+    var rowId = "rowId"+(num+1);
+    createRow.setAttribute("id", rowId);
+    tableBody.appendChild(createRow);
+
+    var serialCell = document.createElement('div');
+    serialCell.setAttribute("class", "divTableCell");
+
+    var serialNum = document.querySelector("#"+rowId);
+    serialNum.appendChild(serialCell);
+    serialCell.innerText = num;
     for(key in allStudentDetails.mtech[0]){
-        var tableCell = document.createElement('div');
-        tableCell.setAttribute('class', "divTableCell");
-        document.querySelector('.divTableRow').append(tableCell); 
-        tableCell.innerHTML = allStudentDetails.mtech[0][key];
+        var serialCell = document.createElement('div');
+        serialCell.setAttribute('class', "divTableCell");
+        document.querySelector('#'+rowId).append(serialCell); 
+        serialCell.innerHTML = allStudentDetails.mtech[0][key];
     }
-    console.log(tableRow);
+    resetTable();
 }
 
+var resetTable = ()=>{
+    document.querySelector("#sName").value = '';
+    document.querySelector("#sRoll").value = '';
+    document.querySelector("#sAge").value = '';
+    document.querySelector("input[name=gender]:checked").value = 'Male';
+    document.querySelector("#sCourse").value = "MTech";
+}
 
 
